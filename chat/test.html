@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        div {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="switchto();">
+    <!-- macht, das nach laden der Seite der erste Text sixhtbar wird-->
+    <div id="linksnbutts" style="display:block">
+        <a href="javascript:switchto('b1')">Zu B1</a>
+        <a href="javascript:switchto('b2')">Zu B2</a>
+        <a href="javascript:switchto('b3')">Zu B3</a>
+        <a href="javascript:switchto('b4')">Zu B4</a>
+        <!--Es geht auch mit buttons, dann muss man aber mehr css machen!!Q -->
+        <button onclick="switchto('b1')">Knopf zu B1</button>
+        <button onclick="switchto('b2')">Knopf zu B2</button>
+        <button onclick="switchto('b3')">Knopf zu B3</button>
+        <button onclick="switchto('b4')">Knopf zu B4</button>
+    </div>
+    <div id="b1">
+
+        <p>Dies ist der Inhalt von B1 welcher stansartmäßig geladen wird</p>
+    </div>
+    <div id="b2">
+
+        <p>Dies ist der Inhalt von B2</p>
+    </div>
+    <div id="b3">
+
+        <p>Dies ist der Inhalt von B3</p>
+    </div>
+    <div id="b4">
+
+        <p>Dies ist der Inhalt von B4</p>
+    </div>
+
+    <script>
+        function switchto(id = "b1") { //öffnet standartmäßig B1
+            document.getElementById("b1").style.display = "none";
+            document.getElementById("b2").style.display = "none";
+            document.getElementById("b3").style.display = "none";
+            document.getElementById("b4").style.display = "none";
+
+            //hier wird das ausgesuchte Element sichtbar gemacht: 
+            document.getElementById(id).style.display = "block";
+
+        }
+    </script>
+</body>
+
+</html>
